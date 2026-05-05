@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV Park OS | Portable Magnetic Submetering</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">RV PARK <span>OS</span></div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#calculator">ROI Calculator</a>
+            <a href="#order" class="btn-primary">Reserve Now</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">V1 Prototype Now Available</div>
+                <h1>Increase Your NOI. <br><span class="highlight">Force $6k+ in Appreciation.</span></h1>
+                <p>The only submetering solution that installs in 10 seconds. No electricians, no permits, no lost revenue—just a massive jump in your park's valuation.</p>
+                <div class="hero-btns">
+                    <a href="#order" class="btn-primary btn-large">Order for $299</a>
+                    <a href="#vision" class="btn-secondary btn-large">The Founder's Vision</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="prototype.jpg" alt="RV Park OS Magnetic Submeter Prototype">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="stats" class="stats-bar">
+        <div class="container">
+            <div class="stat-item">
+                <span class="stat-value">$0</span>
+                <span class="stat-label">Installation Cost</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">10s</span>
+                <span class="stat-label">Setup Time</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">ANSI</span>
+                <span class="stat-label">Billing Accuracy</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="calc-grid">
+                <div class="calc-inputs">
+                    <h2>Calculate Your <span class="highlight">Valuation Boost</span></h2>
+                    <p>See the massive impact that capturing lost revenue has on your park's exit valuation.</p>
+                    
+                    <div class="input-group">
+                        <label>Number of Sites</label>
+                        <input type="range" id="sites-range" min="10" max="500" value="50" step="10">
+                        <div class="range-value"><span id="sites-display">50</span> Sites</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Monthly Leakage Per Site</label>
+                        <input type="range" id="leakage-range" min="20" max="150" value="50" step="5">
+                        <div class="range-value">$<span id="leakage-display">50</span> /mo</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Market Cap Rate (%)</label>
+                        <input type="range" id="cap-range" min="5" max="12" value="8" step="0.5">
+                        <div class="range-value"><span id="cap-display">8.0</span>%</div>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-card">
+                        <span class="result-label">Annual NOI Increase</span>
+                        <span class="result-value" id="noi-result">$30,000</span>
+                    </div>
+                    <div class="result-card highlight-card">
+                        <span class="result-label">Exit Valuation Boost</span>
+                        <span class="result-value" id="valuation-result">$375,000</span>
+                        <div class="result-badge">Forced Appreciation</div>
+                    </div>
+                    <p class="calc-note">*Based on industry standard valuation models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Built for the Grid. <br>Designed for the Park.</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📈</div>
+                    <h3>NOI Multiplier</h3>
+                    <p>Stop eating the cost of high power usage. Every dollar saved in utilities is a direct jump in your Net Operating Income and overall park valuation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🧲</div>
+                    <h3>10-Second Install</h3>
+                    <p>Magnetic mount slaps directly to your existing metal pedestal. Plugs in instantly. No tools, no digging, no permits required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Utility Grade</h3>
+                    <p>ANSI-certified billing accuracy. The same robust, weather-proof meters the power companies use, housed in a beefy, rugged enclosure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="vision-section">
+        <div class="container">
+            <div class="vision-box">
+                <div class="founder-photo">
+                    <img src="founder.jpg" alt="Tyler, Founder of RV Park OS">
+                </div>
+                <div class="vision-content">
+                    <h3>A Letter From the Founder</h3>
+                    <p>"As an RV park owner myself, I was tired of two things: guests who left their AC on 24/7 and the $1,500 quote from my electrician to 'fix' it. I didn't want to dig up my park or wait 6 months for a permit.</p>
+                    <p>I built RV Park OS because I needed a way to capture lost revenue and increase my NOI without the headache. It’s built for owners, by an owner. Whether you're a mom-and-pop with 10 sites or an investor with 1,000, this is the tool I wish I had on day one."</p>
+                    <div class="founder-sig">
+                        <strong>Tyler</strong><br>
+                        <span>Founder, RV Park OS & Owner, The Point Campground</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="cta-section">
+        <div class="container">
+            <div class="order-box">
+                <h2>Ready to Start Saving?</h2>
+                <p>Join the first wave of park owners taking control of their power costs.</p>
+                <div class="price-tag">
+                    <span class="currency">$</span>
+                    <span class="amount">299</span>
+                    <span class="suffix">+ shipping</span>
+                </div>
+                <form id="reserve-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Park Name" required>
+                    <input type="number" placeholder="Number of Units Needed" min="1" required>
+                    <button type="submit" class="btn-primary btn-full">Reserve My Units</button>
+                </form>
+                <p class="form-note">No payment required today. We will contact you with shipping details and a final invoice.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RV Park OS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

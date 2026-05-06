@@ -131,7 +131,7 @@ nav {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     font-weight: 800;
@@ -142,7 +142,7 @@ h1 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--text-muted);
     margin-bottom: 2.5rem;
 }
@@ -215,7 +215,7 @@ p {
 }
 
 .calc-inputs h2 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 5vw, 2.8rem);
     margin-bottom: 1rem;
 }
 
@@ -300,14 +300,14 @@ input[type=range]::-webkit-slider-thumb {
 
 .result-value {
     display: block;
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 800;
     font-family: 'Outfit', sans-serif;
 }
 
 .highlight-card .result-value {
     color: var(--primary);
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
 }
 
 .result-badge {
@@ -537,18 +537,86 @@ input:focus {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .hero .container,
+    .calc-grid {
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 968px) {
+    nav {
+        padding: 1.5rem 2rem;
+    }
+
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
+        padding-top: 2rem;
     }
+
     .hero-btns {
         justify-content: center;
+        flex-direction: column;
     }
-    h1 {
-        font-size: 3rem;
+
+    .btn-large {
+        width: 100%;
     }
+
+    .hero-image {
+        order: -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .stats-bar .container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .calc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calc-results {
+        padding: 2rem;
+    }
+
     .feature-grid {
         grid-template-columns: 1fr;
+    }
+
+    .vision-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        padding: 2.5rem;
+    }
+
+    .vision-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .order-box {
+        padding: 2rem;
+    }
+
+    .amount {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a:not(.btn-primary) {
+        display: none;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
     }
 }

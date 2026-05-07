@@ -30,20 +30,4 @@ sitesRange.addEventListener('input', calculate);
 leakageRange.addEventListener('input', calculate);
 capRange.addEventListener('input', calculate);
 
-// Form Handling
-document.getElementById('reserve-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simulate form submission
-    const btn = e.target.querySelector('button');
-    const originalText = btn.innerText;
-    
-    btn.innerText = 'Reserving...';
-    btn.disabled = true;
-    
-    setTimeout(() => {
-        alert('Thank you! Your spot has been reserved. We will reach out to you shortly with shipping details.');
-        btn.innerText = 'Spot Reserved!';
-        e.target.reset();
-    }, 1500);
-});
+

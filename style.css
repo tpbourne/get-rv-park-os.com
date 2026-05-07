@@ -8,6 +8,15 @@
     --white: #FFFFFF;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -618,5 +627,17 @@ input:focus {
 
     .hero {
         padding: 3rem 0;
+    }
+}
+
+.tally-embed-container {
+    margin-top: 2rem;
+    min-height: 450px;
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .tally-embed-container {
+        min-height: 550px;
     }
 }

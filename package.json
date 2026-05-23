@@ -1,0 +1,25 @@
+{
+  "name": "getrvparkos.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpbourne/get-rv-park-os.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tpbourne/get-rv-park-os.com/issues"
+  },
+  "homepage": "https://github.com/tpbourne/get-rv-park-os.com#readme",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

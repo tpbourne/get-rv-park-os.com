@@ -1,1 +1,18 @@
 .DS_Store
+
+# Patent IP — keep local, never push
+Patent_Drawings.html
+Patent_Application_Specification.md
+Patent_Filing_Guide.md
+
+# Raw prototype photos (large binaries)
+prototype_v1.jpeg
+Updated pedestal.jpeg
+accurate_rendering.png
+
+# Node
+node_modules/
+package-lock.json
+
+# Typescript
+tsconfig.json

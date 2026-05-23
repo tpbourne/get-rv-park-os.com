@@ -161,27 +161,71 @@
         <div class="container">
             <div class="order-box">
                 <h2>Ready to Start Saving?</h2>
-                <p>Join the first wave of park owners taking control of their power costs.</p>
+                <p>Join the first wave of park owners taking control of their power costs. A $299 deposit secures your spot in line.</p>
                 <div class="price-tag">
                     <span class="currency">$</span>
                     <span class="amount">299</span>
-                    <span class="suffix">+ shipping</span>
+                    <span class="suffix">Deposit</span>
                 </div>
-                <!-- Tally Embed -->
-                <div class="tally-embed-container">
-                    <iframe 
-                        data-tally-src="https://tally.so/embed/A7APdB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                        loading="lazy" 
-                        width="100%" 
-                        height="500" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        title="RV Park OS Reservation">
-                    </iframe>
+                <!-- Payment Form -->
+                <form id="checkout-form" class="custom-form">
+                    <div class="checkout-explanation" style="background: rgba(0,245,212,0.1); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid var(--primary);">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">How it works:</h4>
+                        <ol style="margin-left: 1.2rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                            <li>Pay a $299 fully-refundable deposit today via Card to secure your hardware.</li>
+                            <li>We will calculate your shipping costs and email you a final invoice.</li>
+                            <li>Pay the remaining balance via ACH Bank Transfer to avoid processing fees.</li>
+                        </ol>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerName">Full Name</label>
+                        <input type="text" id="customerName" name="customerName" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customerEmail">Email Address</label>
+                        <input type="email" id="customerEmail" name="customerEmail" required placeholder="john@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parkName">RV Park Name</label>
+                        <input type="text" id="parkName" name="parkName" required placeholder="Sunset RV Resort">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sites">Total Number of Sites</label>
+                        <input type="number" id="sites" name="sites" required placeholder="50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">Number of Meters to Order ($299 each)</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                        <small class="form-text">We will invoice you for the remaining balance after your deposit.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pedestalPic">Picture of Current Pedestal (Optional)</label>
+                        <input type="file" id="pedestalPic" name="pedestalPic" accept="image/*">
+                        <small class="form-text">Upload a photo so we can confirm compatibility.</small>
+                    </div>
+
+                    <div class="price-summary">
+                        <span>Due Today:</span>
+                        <span class="amount-display">$299</span>
+                    </div>
+
+                    <div id="error-message" class="error-message" style="display: none;"></div>
+
+                    <button type="submit" class="btn-primary btn-full" id="submit-btn">
+                        <span id="btn-text">Pay $299 Deposit</span>
+                        <span id="btn-loader" style="display: none;">Processing...</span>
+                    </button>
+                </form>
+
+                <div class="contact-founder">
+                    <a href="mailto:tyler@getrvparkos.com" class="contact-link desktop-link">Have questions? Email the founder</a>
+                    <a href="sms:+18599825333" class="contact-link mobile-link">Have questions? Text the founder</a>
                 </div>
-                <script async src="https://tally.so/widgets/embed.js"></script>
-                <p class="form-note">No payment required today. We will contact you with shipping details and a final invoice.</p>
             </div>
         </div>
     </section>
@@ -192,6 +236,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="main.js"></script>
 </body>
 </html>
+

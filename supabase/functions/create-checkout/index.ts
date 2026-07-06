@@ -75,6 +75,12 @@ serve(async (req) => {
         },
       ],
       mode: 'payment',
+      shipping_address_collection: {
+        allowed_countries: ['US', 'CA'], // Add more country codes if needed
+      },
+      phone_number_collection: {
+        enabled: true,
+      },
       success_url: `${originUrl}/?success=true`,
       cancel_url: `${originUrl}/?canceled=true`,
       metadata: {
